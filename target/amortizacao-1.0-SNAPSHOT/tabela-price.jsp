@@ -31,6 +31,8 @@
         </style>
     </head>
     <body>
+        <h1>Tabela Price</h1>
+        
         <form method="POST">
             <input name="loan" placeholder="Empréstimo">
             <input name="interest" placeholder="juros">
@@ -43,23 +45,34 @@
                    <tr>
                        <th>Mês</th>
                        <th>Parcela</th>
-                       <th>Amortização</th>
                        <th>Juros</th>
+                       <th>Amortização</th>
                        <th>Saldo devedor</th>
                    </tr>
+                   <%
+                        double juros = interest/100;
+                        double parcela = loan * (Math.pow(1+juros, months)*juros)/(Math.pow(1+juros, months)-1);
+                        double devedor = loan;
+                        DecimalFormat format = new DecimalFormat("#####.##");
+                   %>
+                   <tr>
+                       <td>0</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td><%= format.format(loan) %></td>
+                   </tr>
                    <% 
-                    double juros = interest/100;
-                    double parcela = loan * (Math.pow(1+juros, months)*juros)/(Math.pow(1+juros, months)-1);
                     for(int i = 0; i < months; i++) {    
-                        double devedor = loan - parcela * i;
                         double valorJuros = devedor * juros;
-                        DecimalFormat format = new DecimalFormat("#####.###");
+                        double amortizacao = parcela - valorJuros;
+                        devedor = devedor - amortizacao;
                    %>
                    <tr>
                        <td><%= i+1 %></td>
                        <td><%= format.format(parcela) %></td>
-                       <td><%= format.format(parcela - valorJuros) %></td>
                        <td><%= format.format(valorJuros) %></td>
+                       <td><%= format.format(amortizacao) %></td>
                        <td><%= format.format(devedor) %></td>
                    </tr>
                    <% } %>
