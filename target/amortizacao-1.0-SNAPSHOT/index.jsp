@@ -14,5 +14,6 @@
     <body>
         <h1>Amortização Online</h1>
         <%@include file="./WEB-INF/jspf/header.jspf"%>
+        <a href="americana.jsp">americana</a>
     </body>
 </html>

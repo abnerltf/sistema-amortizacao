@@ -23,10 +23,7 @@
             
             <label for="parcela">Período:</label><br>
             <input type="number" value="6" name="parcela"><br><br>
-            <select name="tipo"><br>
-                <option value="mensal">Mensal</option>
-                <option value ="anual">Anual</option>    
-            </select>
+           
             
             <input type="submit" value="Calcular">
         </form>
@@ -36,30 +33,48 @@
                 float juros = Float.parseFloat(request.getParameter("juros"))/100;
                 float valor_juros = emprestimo*juros; %>
             
-                <table style="width:50%" border="1" align="center">
+                <table style="width:30%" border="1" align="center">
                     <tr>
-                        <th>n.</th>
+                        <th style="width:40px">n.</th>
                         <th>Parcela</th>
                         <th>Amortização</th>
-                        <th>Juros(%)</th>
+                        <th>Juros(R$)</th>
                         <th>Saldo devedor</th>
                     </tr>
                 
-               <% for(int i=1; i<=n; i++){%>
+               <% for(int i=1; i<n; i++){%>
                     <tr>
-                        <td><%= i%></td>
-                        <td><%= valor_juros%></td>
-                        <td><%= "0,00"%></td>
-                        <td><%= valor_juros%></td>
-                        <td><%= emprestimo%></td>
+                        <td align="center"><%= i%></td>
+                        <td align="center"><%= valor_juros%></td>
+                        <td align="center"><%= "0.0"%></td>
+                        <td align="center"><%= valor_juros%></td>
+                        <td align="center"><%= emprestimo%></td>
                     </tr>
                     <% }%>
+                    
+                    <tr>
+                    <td align="center"><%= n %></td>
+                            <td align="center"><%= emprestimo + valor_juros %></td>
+                            <td align="center"><%= emprestimo%></td>
+                            <td align="center"><%= valor_juros%></td>
+                            <td align="center">0.0</td>
+                    </tr>
+                    
+                    <tr>
+                            <td align="center">-</td>
+                            <td align="center"><%= emprestimo + (valor_juros*n) %></td>
+                            <td align="center"><%= emprestimo%></td>
+                            <td align="center"><%= valor_juros*n%></td>
+                            
+                            <td align="center"><b>&#8656   TOTAIS</b></td>
+                            
+                    </tr><td align="center" colspan="5"><b>PARCELA = AMORTIZAÇÃO + JUROS</b></td>
                 </table>
             <%   
                 
             } catch (Exception e) {int n = 0;
             }%>
-        
+            <br><br>
         <a href="index.jsp">Voltar</a>  
     </body>
 </html>
