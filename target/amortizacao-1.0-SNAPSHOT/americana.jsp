@@ -12,6 +12,7 @@
         <title>JSP Calculo amortizacao americano</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>Tabela de Amortização Americana</h1>
         
         <form>
@@ -74,7 +75,7 @@
                 
             } catch (Exception e) {int n = 0;
             }%>
-            <br><br>
-        <a href="index.jsp">Voltar</a>  
+            <br><br> 
+            <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>
