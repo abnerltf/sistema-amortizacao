@@ -9,13 +9,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
+      .content {
+          text-align: justify;
+      }
+      .navbar-collapse {
+          justify-content: center;
+      }
   </style>
 </head>
 <body>
+    
+    <%@include page="WEB-INF/jspf/header.jspf" %>
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>Atividade de Amortização</h1>
   <p>Professsor Ricardo Pupo - POO</p> 
@@ -28,7 +32,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-      <a class="nav-link" href="#">Início</a>
+      <a class="nav-link" href="index.jsp">Início</a>
       <li class="nav-item">
         <a class="nav-link" href="americana.jsp">SAA - Americana</a>
       </li>
@@ -41,7 +45,7 @@
     </ul>
   </div>  
 </nav>
- <div class="col-sm-8">
+ <div class="col-sm-10 content">
       <h2>Americana</h2>
       <p>tabela SAA é a sigla para Sistema Americano de Amortização, é um sistema de amortização de dívidas onde os juros de um empréstimo são pagos periodicamente, porém a quitação do empréstimo se dá por meio de uma única parcela que deverá ser paga ao final do contrato. Há também a opção dos juros serem capitalizados e pagos juntos com o valor principal no final do contrato. Porém, nesse caso é preciso que seja especificado isso em contrato, caso contrário entende-se que os juros deverão ser pagos mensalmente.</p>
       <br>
