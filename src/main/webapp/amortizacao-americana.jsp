@@ -34,7 +34,7 @@
                 float juros = Float.parseFloat(request.getParameter("juros"))/100;
                 float valor_juros = emprestimo*juros; %>
             
-                <table style="width:30%" border="1" align="center">
+                <table  class="table">
                     <tr>
                         <th style="width:40px">n.</th>
                         <th>Parcela</th>
@@ -45,31 +45,32 @@
                 
                <% for(int i=1; i<n; i++){%>
                     <tr>
-                        <td align="center"><%= i%></td>
-                        <td align="center"><%= valor_juros%></td>
-                        <td align="center"><%= "0.0"%></td>
-                        <td align="center"><%= valor_juros%></td>
-                        <td align="center"><%= emprestimo%></td>
+                        <td><%= i%></td>
+                        <td><%= valor_juros%></td>
+                        <td><%= "0.0"%></td>
+                        <td><%= valor_juros%></td>
+                        <td><%= emprestimo%></td>
                     </tr>
                     <% }%>
                     
                     <tr>
-                    <td align="center"><%= n %></td>
-                            <td align="center"><%= emprestimo + valor_juros %></td>
-                            <td align="center"><%= emprestimo%></td>
-                            <td align="center"><%= valor_juros%></td>
-                            <td align="center">0.0</td>
+                        <td><%= n %></td>
+                        <td><%= emprestimo + valor_juros %></td>
+                        <td><%= emprestimo%></td>
+                        <td><%= valor_juros%></td>
+                        <td>0.0</td>
                     </tr>
                     
                     <tr>
-                            <td align="center">-</td>
-                            <td align="center"><%= emprestimo + (valor_juros*n) %></td>
-                            <td align="center"><%= emprestimo%></td>
-                            <td align="center"><%= valor_juros*n%></td>
-                            
-                            <td align="center"><b>&#8656   TOTAIS</b></td>
-                            
-                    </tr><td align="center" colspan="5"><b>PARCELA = AMORTIZAÇÃO + JUROS</b></td>
+                        <td>-</td>
+                        <td><%= emprestimo + (valor_juros*n) %></td>
+                        <td><%= emprestimo%></td>
+                        <td><%= valor_juros*n%></td>
+
+                        <td><b>&#8656   TOTAIS</b></td> 
+                    </tr>
+                    
+                    <td colspan="5"><b>PARCELA = AMORTIZAÇÃO + JUROS</b></td>
                 </table>
             <%   
                 

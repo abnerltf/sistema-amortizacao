@@ -19,35 +19,11 @@
 </head>
 <body>
     
-    <%@include page="WEB-INF/jspf/header.jspf" %>
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>Atividade de Amortização</h1>
-  <p>Professsor Ricardo Pupo - POO</p> 
-</div>
+    <%@include file="WEB-INF/jspf/header.jspf" %>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-      <a class="nav-link" href="index.jsp">Início</a>
-      <li class="nav-item">
-        <a class="nav-link" href="americana.jsp">SAA - Americana</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="amortizacao-constante.jsp">Constante</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tabela-price.jsp">Price</a>
-      </li>    
-    </ul>
-  </div>  
-</nav>
  <div class="col-sm-10 content">
       <h2>Americana</h2>
-      <p>tabela SAA é a sigla para Sistema Americano de Amortização, é um sistema de amortização de dívidas onde os juros de um empréstimo são pagos periodicamente, porém a quitação do empréstimo se dá por meio de uma única parcela que deverá ser paga ao final do contrato. Há também a opção dos juros serem capitalizados e pagos juntos com o valor principal no final do contrato. Porém, nesse caso é preciso que seja especificado isso em contrato, caso contrário entende-se que os juros deverão ser pagos mensalmente.</p>
+      <p>Tabela SAA é a sigla para Sistema Americano de Amortização, é um sistema de amortização de dívidas onde os juros de um empréstimo são pagos periodicamente, porém a quitação do empréstimo se dá por meio de uma única parcela que deverá ser paga ao final do contrato. Há também a opção dos juros serem capitalizados e pagos juntos com o valor principal no final do contrato. Porém, nesse caso é preciso que seja especificado isso em contrato, caso contrário entende-se que os juros deverão ser pagos mensalmente.</p>
       <br>
       <h2>Constante</h2>
       <p>O sistema de amortização constante (SAC) é uma forma de amortização de um empréstimo por prestações que incluem os juros, amortizando assim partes iguais do valor total do empréstimo. Neste sistema o saldo devedor é reembolsado em valores de amortização iguais. Desta forma, no sistema SAC o valor das prestações é decrescente, já que os juros diminuem a cada prestação. O valor da amortização é calculado, dividindo-se o valor do principal pelo número de períodos de pagamento, ou seja, de parcelas. Por sua vez, os juros são calculados sobre o saldo devedor, multiplicando-se a taxa pelo saldo. Finalmente, a soma da amortização e dos juros resultam no valor da parcela. </p>
@@ -55,8 +31,7 @@
       <p>Tabela Price é um método usado em amortização de empréstimo cuja principal característica é apresentar prestações (ou parcelas) iguais. O método foi apresentado em 1771 por Richard Price em sua obra "Observações sobre Pagamentos Remissivos".</p>
       <p>A tabela Price usa o regime de juros compostos para calcular o valor das parcelas de um empréstimo e, dessa parcela, há uma proporção relativa ao pagamento de juros e amortização do valor emprestado.</p> 
     </div>
-    <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Abner - Cássio - Hugo - Vinícius </p>
-</div>
+    
+    <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

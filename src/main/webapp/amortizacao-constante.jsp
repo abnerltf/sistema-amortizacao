@@ -25,6 +25,8 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
+        
         <h1>Tabela Sistema de Amortização Constante (SAC)</h1>
         
         <form method="POST">
@@ -35,7 +37,7 @@
         </form>
         
         <% if (!error) { %>
-               <table>
+               <table class="table">
                    <tr>
                        <th>Mês</th>
                        <th>Parcela</th>
@@ -54,5 +56,7 @@
                    <% } %>
                </table>
         <% }%>
+        
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>
