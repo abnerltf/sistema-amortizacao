@@ -31,6 +31,7 @@
         </style>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>Tabela Price</h1>
         
         <form method="POST">
@@ -78,5 +79,7 @@
                    <% } %>
                </table>
         <% } %>
+        
+            <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>
