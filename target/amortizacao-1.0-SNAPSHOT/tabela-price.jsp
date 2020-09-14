@@ -35,14 +35,14 @@
         <h1>Tabela Price</h1>
         
         <form method="POST">
-            <input name="loan" placeholder="Empréstimo">
-            <input name="interest" placeholder="juros">
-            <input name="months" placeholder="Número de meses">
+            <input name="loan" placeholder="Empréstimo" type="number">
+            <input name="interest" placeholder="juros" type="number">
+            <input name="months" placeholder="Número de meses" type="number">
             <input type="submit">
         </form>
         
         <% if (!error) { %>
-               <table>
+               <table class="table">
                    <tr>
                        <th>Mês</th>
                        <th>Parcela</th>

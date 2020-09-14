@@ -1,6 +1,7 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-    <div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="jumbotron text-center footer" style="margin-bottom:0">
   <p>Abner - Cássio - Hugo - Vinícius </p>
+  <p><a href="https://blacklivesmatter.com" class="black">#BlackLivesMatter</a></p>
 </div>
 
